@@ -1,13 +1,13 @@
 const React = require('react');
-const { ViewPropTypes } = ReactNative = require('react-native');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 const {
   StyleSheet,
+  ViewPropTypes,
   Text,
   View,
   Animated,
-} = ReactNative;
+} = require('react-native');
 const Button = require('./Button');
 
 const DefaultTabBar = createReactClass({

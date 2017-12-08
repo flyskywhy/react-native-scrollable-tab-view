@@ -1,6 +1,5 @@
 const React = require('react');
 const { Component } = React;
-const { ViewPropTypes } = ReactNative = require('react-native');
 const createReactClass = require('create-react-class');
 const PropTypes = require('prop-types');
 const {
@@ -10,9 +9,10 @@ const {
   ScrollView,
   Platform,
   StyleSheet,
+  ViewPropTypes,
   ViewPagerAndroid,
   InteractionManager,
-} = ReactNative;
+} = require('react-native');
 const TimerMixin = require('react-timer-mixin');
 
 const SceneComponent = require('./SceneComponent');

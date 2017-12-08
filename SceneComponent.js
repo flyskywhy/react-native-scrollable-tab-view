@@ -1,7 +1,6 @@
 const React = require('react');
-const ReactNative = require('react-native');
 const {Component, } = React;
-const {View, StyleSheet, } = ReactNative;
+const {View, StyleSheet, } = require('react-native');
 
 const StaticContainer = require('./StaticContainer');
 
