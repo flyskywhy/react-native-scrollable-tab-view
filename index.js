@@ -165,7 +165,7 @@ const ScrollableTabView = createReactClass({
         scrollEventThrottle={16}
         scrollsToTop={false}
         showsHorizontalScrollIndicator={false}
-        scrollEnabled={!this.props.locked}
+        scrollEnabled={Platform.OS === 'web' ? false : !this.props.locked}
         directionalLockEnabled
         alwaysBounceVertical={false}
         keyboardDismissMode="on-drag"
