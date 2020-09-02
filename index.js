@@ -9,10 +9,9 @@ const {
   ScrollView,
   Platform,
   StyleSheet,
-  ViewPropTypes,
-  ViewPagerAndroid,
   InteractionManager,
 } = require('react-native');
+const ViewPager = require('react-native-viewpager');
 const TimerMixin = require('react-timer-mixin');
 
 const SceneComponent = require('./SceneComponent');
@@ -35,7 +34,6 @@ const ScrollableTabView = createReactClass({
     onChangeTab: PropTypes.func,
     onScroll: PropTypes.func,
     renderTabBar: PropTypes.any,
-    style: ViewPropTypes.style,
     contentProps: PropTypes.object,
     scrollWithoutAnimation: PropTypes.bool,
     locked: PropTypes.bool,
@@ -175,7 +173,7 @@ const ScrollableTabView = createReactClass({
       </ScrollView>;
     } else {
       const scenes = this._composeScenes();
-      return <ViewPagerAndroid
+      return <ViewPager
         key={this._children().length}
         style={styles.scrollableContentAndroid}
         initialPage={this.props.initialPage}
@@ -190,7 +188,7 @@ const ScrollableTabView = createReactClass({
         {...this.props.contentProps}
       >
         {scenes}
-      </ViewPagerAndroid>;
+      </ViewPager>;
     }
   },
 
